@@ -1,0 +1,26 @@
+<ion-content>
+  <div class="header">
+    <h1>Bienvenue sur Greenium </h1>
+    <h3>Veuillez vous connecter, pour vous débarrasser facilement de vos encombrants !</h3>
+</div>
+  <div class="form">
+      <ion-input required type="email" placeholder="Votre email" [(ngModel)]='email' name='email'><ion-icon class="nav" name="at-outline"></ion-icon></ion-input>
+      <ion-input required type="password" placeholder="Mot de passe" [(ngModel)]='password' name='password'><ion-icon class="nav" name="clipboard-outline"></ion-icon></ion-input>
+  
+    </div>
+    
+    <div class="button">
+      Connexion <ion-icon type="submit" (click)='login()' name="chevron-forward-outline">
+        <a [routerLink]="['/home']"></a></ion-icon>
+    </div>
+   
+    <div class="footer">
+    <h3 (click)='signup()'>Vous n’avez pas de compte <br> Greenium ?  <span> <br><u>Créez-en un maintenant</u></span>
+    </h3>
+
+    <p><a [routerLink]="['/forgot-password']">Mot de passe oublié ?</a></p>
+
+   <p> Besoin d’une aide supplémentaire ? Appelez le 0800 93 932. </p>
+    </div>
+ 
+</ion-content>
