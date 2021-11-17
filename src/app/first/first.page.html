@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+      <ion-title>
+          Bienvenue
+      </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="center">
+      <ion-slides #slides pages="true" [options]="slideOpts" (ionSlideDidChange)="ionSlideChange(slides)">
+
+          <ion-slide class="step-one">
+              <img margintop20 src="../../assets/slider/1.png" class="img1" />
+              <p><strong> Vous voulez vous débarasser de vos encombrants ?</strong> <br><br>Avec cette application, c'est désormais à votre portée en seulement quelques clics !</p>
+              <ion-progress-bar color="primary" value="0.25"></ion-progress-bar>
+
+
+          </ion-slide>
+
+          <ion-slide class="step-two">
+              <img margintop20 src="../../assets/slider/5.png" class="img2" />
+              <p class="p2"> <strong> Peu importe le type ou la quantité de déchets</strong>, <br><br>vous n'aurez plus de problème pour vous en débarasser</p>
+              <ion-progress-bar color="primary" value="0.50"></ion-progress-bar>
+
+          </ion-slide>
+
+          <ion-slide class="step-three">
+              <img margintop20 src="../../assets/slider/3.png" class="img3" />
+              <p><strong> Contrairement à nos concurrents,</strong> les déchets toxiques ou radioactis ne nous font pas exception ! </p>
+              <ion-progress-bar color="primary" value="0.75"></ion-progress-bar>
+
+          </ion-slide>
+
+          <ion-slide class="step-four">
+              <img margintop20 src="../../assets/slider/4.png" class="img4" />
+              <p><strong>Envie de louer un conteneur ? </strong><br><br>Choissisez la taille souhaitée et commander là en quelques clics ! </p>
+              <ion-progress-bar color="primary" value="1"></ion-progress-bar>
+
+          </ion-slide>
+
+      </ion-slides>
+
+      <ion-button class="tour-boutton" (click)="next()">
+          <div class="parent"> {{buttonName}} </div>
+      </ion-button>
+  </div>
+</ion-content>

@@ -10,7 +10,7 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: '',
+    path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
@@ -39,7 +39,11 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  }
+  },
+  {
+    path: '',
+    loadChildren: () => import('./first/first.module').then( m => m.FirstPageModule)
+  },
 ];
 @NgModule({
   imports: [
