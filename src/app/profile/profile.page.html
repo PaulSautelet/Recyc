@@ -1,11 +1,54 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-title>profile</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+<div class="container">
+  <div class="overlay">
+    <ion-avatar>
+      <img src="../../assets/Green.png">
+    </ion-avatar>
+  </div>
+</div>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title style="text-transform: capitalize;">
+      <strong>{{user?.name}}</strong>
+    </ion-card-title>
+    <br>
+      <ion-card-subtitle>
+        Vos informations
+      </ion-card-subtitle>
+  </ion-card-header>
+
   <ion-card-content>
-<p>{{users?.email}}</p>
-</ion-card-content>
+    <ion-item lines="none">
+      <ion-icon name="mail"></ion-icon>
+      <ion-label> <p>{{user?.email}}</p>
+       
+      </ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-icon name="call"></ion-icon>
+      <ion-label><p>{{user?.phone}}</p>
+       
+      </ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-icon name="locate"></ion-icon>
+      <ion-label>{{user?.adress}}</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-icon name="map"></ion-icon>
+      <ion-label>{{user?.region}}</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-icon name="pin"></ion-icon>
+      <ion-label>{{user?.ville}}</ion-label>
+    </ion-item>
+  </ion-card-content>
+</ion-card>
 </ion-content>
+

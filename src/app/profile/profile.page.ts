@@ -1,22 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../services/auth.service';
+import firebase from 'firebase/app';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.page.html',
   styleUrls: ['./profile.page.scss'],
 })
+
 export class ProfilePage implements OnInit {
-  name:string;
-
-  constructor(
-    private auth: AuthService
-  ) { }
-
+  user:any;
+  constructor
+  (
+private auth: AuthService
+  ){}
+  
   ngOnInit() {
-    this.auth.user$.subscribe(user => {
-      this.name = user.userName;
-    })
-  }
-
-}
+  this.auth.user$.subscribe(user => {
+  this.user = user;
+})
+   }
+ }

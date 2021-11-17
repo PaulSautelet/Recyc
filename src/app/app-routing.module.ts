@@ -44,6 +44,14 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./first/first.module').then( m => m.FirstPageModule)
   },
+  {
+    path: 'adam',
+    loadChildren: () => import('./adam/adam.module').then( m => m.AdamPageModule)
+  },
+  {
+    path: 'a-propos-de-nous',
+    loadChildren: () => import('./a-propos-de-nous/a-propos-de-nous.module').then( m => m.AProposDeNousPageModule)
+  },
 ];
 @NgModule({
   imports: [
