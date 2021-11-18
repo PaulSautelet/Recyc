@@ -35,6 +35,17 @@ h1 {
         --color: black;
     }
 }
+.sel{
+    background-color: #fff;
+    --padding-start: 42px;
+        height: 55px;
+        border-radius: 25px;
+        margin-bottom: 22px;
+        --placeholder-color: grey;
+        --color: black;
+
+}
+
 .button{
     width: 50vw;
     background-color: #0DAB76;

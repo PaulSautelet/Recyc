@@ -5,11 +5,16 @@
 </div>
 
   <div class="form">
-      <ion-input required type="text" placeholder="Votre nom" [(ngModel)]='name' name='name'><ion-icon class="nav" name="person-circle-outline"></ion-icon></ion-input>
-      <ion-input required type="email" placeholder="Votre email" [(ngModel)]='email' name='email'><ion-icon class="nav" name="at-outline"></ion-icon></ion-input>
-      <ion-input required type="tel" placeholder="Votre numéro de GSM" [(ngModel)]='phone' name='phone'><ion-icon class="nav" name="call-outline"></ion-icon></ion-input>
-      <ion-input required type="address" placeholder="Votre adresse" [(ngModel)]='address' name='address'><ion-icon class="nav" name="navigate-outline"></ion-icon></ion-input>
-      <ion-input required type="password" placeholder="Mot de passe" [(ngModel)]='password' name='password'><ion-icon class="nav" name="clipboard-outline"></ion-icon></ion-input>
+      <ion-input required type="text" placeholder="Votre nom" clearInput="true" [(ngModel)]='name' name='name'><ion-icon class="nav" name="person-circle-outline"></ion-icon></ion-input>
+      <ion-input required type="email" placeholder="Votre email" clearInput="true" [(ngModel)]='email' name='email'><ion-icon class="nav" name="at-outline"></ion-icon></ion-input>
+      <ion-input required type="tel" placeholder="Votre numéro de GSM" clearInput="true" [(ngModel)]='phone' name='phone'><ion-icon class="nav" name="call-outline"></ion-icon></ion-input>
+      <ion-input required type="address" placeholder="Votre adresse" clearInput="true" [(ngModel)]='address' name='address'><ion-icon class="nav" name="navigate-outline"></ion-icon></ion-input>
+      <ion-select class="sel" aria-required="region" placeholder="Votre région" [(ngModel)]='region' name='region'><ion-icon class="nav" name="map"></ion-icon>
+        <ion-select-option value="B">Bruxelles - Capitale</ion-select-option>
+        <ion-select-option value="W">Wallonne</ion-select-option>
+      </ion-select>
+      <ion-input required type="ville" placeholder="Votre ville" clearInput="true" [(ngModel)]='ville' name='ville'><ion-icon class="nav" name="pin"></ion-icon></ion-input>
+      <ion-input required type="password" placeholder="Mot de passe" clearInput="true" [(ngModel)]='password' name='password'><ion-icon class="nav" name="clipboard-outline"></ion-icon></ion-input>
     </div>
 
 
@@ -18,7 +23,7 @@
     </div>
     
     <div class="footer signup-footer">
-        <h3><a [routerLink]="['/login']">Vous avez déjà un compte ?</a></h3>
+        <h3><a [routerLink]="['/']">Vous avez déjà un compte ?</a></h3>
     </div>
 
     

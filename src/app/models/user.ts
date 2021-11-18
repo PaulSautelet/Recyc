@@ -4,4 +4,11 @@ export interface User {
     userEmail: string;
     userPhone: string;
     createdAt: number;
+    name:string;
+    phone:string;
+    email:string;
+    ville:string;
+    region:string;
+    adress:string;
+    uid:string;
 }
