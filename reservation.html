@@ -1,0 +1,81 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Réservation
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<span (click)="affiche()">C'est quoi 1 mètre cube ?</span>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<ion-item>
+  <ion-label class="style"> 
+    <ion-icon name="cube-outline"></ion-icon>
+
+    Volume : 
+  </ion-label>
+
+  <ion-select [(ngModel)]="selected_vol" (ionChange)="showVol()" placeholder="sélectionnez un volume" cancelText="annuler">
+
+    <ion-select-option value="v1">-5m3</ion-select-option>
+    <ion-select-option value="v2">+5m3</ion-select-option>
+    <ion-select-option value="v3">+7m3</ion-select-option>
+
+  </ion-select>
+
+</ion-item>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<span>Déchets toxiques à évacuer ? Pas de soucis !</span>
+<br>
+<br>
+<br>
+<br>
+<ion-item>
+  <ion-label class="style"> 
+    <ion-icon name="trash-outline"></ion-icon>
+    Catégorie d'encombrant : 
+  </ion-label>
+
+  <ion-select [(ngModel)]="selected_cat" (ionChange)="showCat()" placeholder="sélectionnez une catégorie" cancelText="annuler"  multiple="false">
+    <ion-select-option value="cat1">Encombrants</ion-select-option>
+    <ion-select-option value="cat2">Déchets toxiques</ion-select-option>
+    <ion-select-option value="cat3">Les deux</ion-select-option>
+
+  </ion-select>
+
+</ion-item>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<ion-button fill="outline" shape="round" class="position" (click)="calcul()"><ion-icon name="calculator-outline"></ion-icon> Calculer le prix</ion-button>
+<ion-button fill="outline" shape="round" class="position" href="/tabs/tab2"><ion-icon name="calendar-outline"></ion-icon> Choisir une date</ion-button>
+
+
+</ion-content>
